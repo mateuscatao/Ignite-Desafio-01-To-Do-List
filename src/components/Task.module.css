@@ -1,0 +1,9 @@
+.taskList{
+  margin-top: 4rem;
+}
+
+.taskList header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

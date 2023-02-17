@@ -1,10 +1,10 @@
 import { PlusCircle } from "phosphor-react";
-import styles from './CreateNewTask.module.css';
+import styles from './Input.module.css';
 
-export function CreateNewTask() {
+export function Input() {
   return (
-    <div className={styles.createNewTask}>
-      <form className={styles.createNewTaskForm}>
+    <div className={styles.Input}>
+      <form className={styles.InputForm}>
         <div>
           <textarea 
             name="taskDescription"

@@ -1,10 +1,10 @@
 import { Header } from './components/Header';
 import { Task } from './components/Task';
+import { Input } from './components/Input';
 
 import styles from './App.module.css';
 
 import './global.css';
-import { CreateNewTask } from './components/CreateNewTask';
 
 export function App() {
 
@@ -13,7 +13,7 @@ export function App() {
       <Header />
 
       <div className={styles.wrapper}>
-        <CreateNewTask />
+        <Input />
         <Task />
       </div>
     </div>

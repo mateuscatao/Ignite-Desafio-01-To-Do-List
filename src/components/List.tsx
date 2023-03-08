@@ -1,22 +1,32 @@
-import { Circle, CheckCircle, Trash } from 'phosphor-react';
-import styles from './List.module.css'
+import { Item } from "./Item";
 
-export function List() {
-  return (
+import styles from "./List.module.css"
+
+interface ListProps {
+  items: {
+    id: number;
+    content: string;
+    finished: boolean;
+  }[]
+  onDeleteTask: (taskId: number) => void;
+  onToggleFinish: (taskId: number) => void;
+}
+
+export function List({ items, onDeleteTask, onToggleFinish }: ListProps) {
+  return(
     <div className={styles.list}>
-      <div className={styles.item}>
-        <div>
-          <button className={styles.circle}>
-            <Circle size={22}/>
-          </button>
-
-          <span>Testando uma nova tarefaTestando uma nova tarefa Testando uma nova tarefa Testando uma nova tarefa</span>
-        </div>
-
-        <button className={styles.trash}>
-          <Trash size={18}/>
-        </button>
-      </div>
+      {
+        items.map(item => (
+          <Item
+            id={item.id}
+            key={item.id}
+            content={item.content}
+            finished={item.finished}
+            onDeleteTask={onDeleteTask}
+            onToggleFinish={onToggleFinish}
+          />
+        ))
+      }
     </div>
   );
 }

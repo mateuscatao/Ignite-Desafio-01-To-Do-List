@@ -3,8 +3,8 @@ import styles from './EmptyList.module.css'
 
 export function EmptyList() {
   return (
-    <div className={styles.EmptyListContainer}>
-      <div className={styles.EmptyList}>
+    <div className={styles.emptyListContainer}>
+      <div className={styles.emptyList}>
         <ClipboardText size={60} color="#333333" />
           <div>
             <strong>Você ainda não tem tarefas cadastradas</strong>

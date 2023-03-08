@@ -1,11 +1,11 @@
-.EmptyListContainer {
+.emptyListContainer {
   width: 100%;
   margin-top: 1.5rem;
   border-top: 1px solid var(--gray-400);
   border-radius: 8px;
 }
 
-.EmptyList {
+.emptyList {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
     margin-top: 4rem;
 }
 
-.EmptyList div {
+.emptyList div {
   margin-top: 1rem;
   line-height: 1.4;
 }

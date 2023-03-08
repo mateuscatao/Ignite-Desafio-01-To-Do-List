@@ -1,0 +1,107 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 0.75rem;
+  width: 100%;
+  background: var(--gray-500);
+  border: solid 1px;
+  border-color: var(--gray-400);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.checkControl {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem
+}
+
+.checkControl input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  background-color: transparent;
+  color: var(--blue-300);
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid var(--blue-300);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.checkControl input[type="checkbox"]:hover {
+  background-color: rgba(30, 111, 159, 0.2);
+  border-color: var(--blue-400);
+}
+
+.checkControl input[type="checkbox"]::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: scale(0);
+  transition: 0.1s transform ease-in-out;
+  background: url(../assets/check.svg) center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+}
+
+.checkControl input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.checkControl input[type="checkbox"]:checked {
+  background-color: var(--purple-700);
+  border-color: var(--purple-700);
+  transition: background-color 0.2s;
+}
+
+.checkControl input[type="checkbox"]:checked:hover {
+  background-color: var(--purple-500);
+  border-color: var(--purple-500);
+}
+
+.checkControl span {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+  line-height: 1.4;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.checkControl span:hover {
+  cursor: pointer;
+}
+
+.checkControl:has(:checked) span {
+  font-size: 0.875rem;
+  color: var(--gray-300);
+  line-height: 1.4;
+  text-decoration: line-through;
+  transition: 0.2s;
+}
+
+.trash {
+  background: transparent;
+  border: 0;
+  padding: 0.2rem;
+  margin-top: -0.2rem;
+  color: var(--gray-300);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+.trash:hover {
+  color: var(--red-300);
+  background-color: var(--gray-400);
+  border-radius: 4px;
+}
